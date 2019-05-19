@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a6da96d0-0fd7-440a-8332-cd6cf2793e2e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>senet.chainer.py</StartupFile>
+    <StartupFile>cifar.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,22 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="senet.chainer.py" />
+    <Compile Include="cifar.py" />
+    <Compile Include="senet\baseline.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="senet\se_module.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="senet\se_resnet.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="senet\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="senet\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
